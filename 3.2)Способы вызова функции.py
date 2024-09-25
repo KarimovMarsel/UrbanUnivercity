@@ -12,12 +12,12 @@ def send_email (message, recipient, sender = 'university.help@gmail.com'):
         print('Нельзя отправить письмо самому себе!')
         return
     if not (checker(sender) and checker(recipient)):
-        print('Невозможно отправить письмо с адреса <sender> на адрес <recipient>')
+        print('Невозможно отправить письмо с адреса <',sender,'> на адрес <',recipient,'>',sep='')
         return
     if sender == 'university.help@gmail.com':
-        print('Письмо успешно отправлено с адреса <sender> на адрес <recipient>')
+        print('Письмо успешно отправлено с адреса <',sender,'> на адрес <',recipient,'>',sep='')
     else:
-        print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса <sender> на адрес <recipient>.')
+        print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса <',sender,'> на адрес <',recipient,'>.',sep='')
         return
 
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
